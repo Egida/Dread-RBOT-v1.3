@@ -1151,7 +1151,7 @@ void *BotWorker(void *sock) {
             if (send(datafd, tcpsent, strlen(tcpsent), MSG_NOSIGNAL) == -1) goto end;
         }
 
-        if (strstr(buf, ". HEX"))
+        if (strstr(buf, ". STDHEX"))
         {
             char udphexsent [500];
             sprintf(udphexsent, "\033[37mUDPHEX Flood \033[32m SENT\033[37m...\r\n");
