@@ -1,3 +1,5 @@
+NOTE: "STDHEX" method is currently not working, use "RHEX". Will update soon.
+
 Donations are appreciated: bc1qk0aj03m7hvf8uvwkk30r5h08ftqaqhk9esanfv
 
 Sense the updated cnc is larger, it is recommended to use a server with:
